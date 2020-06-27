@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/adhamaa/strapi-starter-gatsby-blog/issues"
   },
-  "homepage": "https://github.com/adhamaa/strapi-starter-gatsby-blog#readme"
+  "homepage": "https://github.com/adhamaa/strapi-starter-gatsby-blog#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
