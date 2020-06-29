@@ -9,7 +9,10 @@
     "start": "npm run server & npm run develop",
     "clean": "cd frontend && gatsby clean",
     "setup": "cd frontend && gatsby clean && gatsby build",
-    "build": "npm run server & npm run setup"
+    "build": "npm run server & npm run setup",
+    "backend": "cd backend && yarn",
+    "frontend": "cd frontend && npm install",
+    "install": "npm run backend & npm run install"
   },
   "repository": {
     "type": "git",
