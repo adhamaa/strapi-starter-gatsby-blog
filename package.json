@@ -9,7 +9,10 @@
     "start": "npm run server & npm run develop",
     "clean": "cd frontend && gatsby clean",
     "setup": "cd frontend && gatsby clean && gatsby build",
-    "build": "npm run server & npm run setup"
+    "build": "npm run server & npm run setup",
+    "backend": "cd backend && yarn",
+    "frontend": "cd frontend && npm install",
+    "set-dep": "npm run backend & npm run frontend"
   },
   "repository": {
     "type": "git",
@@ -20,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/adhamaa/strapi-starter-gatsby-blog/issues"
   },
-  "homepage": "https://github.com/adhamaa/strapi-starter-gatsby-blog#readme",
-  "dependencies": {
-    "axios": "^0.19.2"
-  }
+  "homepage": "https://github.com/adhamaa/strapi-starter-gatsby-blog#readme"
 }
