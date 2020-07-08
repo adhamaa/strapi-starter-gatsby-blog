@@ -1,10 +1,9 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import ArticlesComponent from "../components/articles"
 
-import "../assets/css/main.css"
+// import "../assets/css/main.css"
 
 const IndexPage = () => (
   <Layout>
@@ -20,7 +19,11 @@ const IndexPage = () => (
                   name
                 }
                 image {
-                  publicURL
+                  childImageSharp {
+                    fluid(maxWidth: 800) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
                 }
               }
             }
@@ -30,7 +33,7 @@ const IndexPage = () => (
       render={(data) => (
         <div className="uk-section">
           <div className="uk-container uk-container-large">
-            <h1>Blog resepi</h1>
+            <h1>resepi bonda</h1>
             <ArticlesComponent articles={data.allStrapiArticle.edges} />
           </div>
         </div>

@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const articles = result.data.articles.edges
   const categories = result.data.categories.edges
 
-  articles.forEach((article, index) => {
+  articles.forEach((article) => {
     createPage({
       path: `/article/${article.node.title}`,
       component: require.resolve("./src/templates/article.js"),
@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  categories.forEach((category, index) => {
+  categories.forEach((category) => {
     createPage({
       path: `/category/${category.node.name}`,
       component: require.resolve("./src/templates/category.js"),

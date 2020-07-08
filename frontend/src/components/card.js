@@ -1,14 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 const Card = ({ article }) => {
   return (
     <Link to={`/article/${article.node.title}`} className="uk-link-reset">
       <div className="uk-card uk-card-muted">
         <div className="uk-card-media-top">
-          <img
-            src={article.node.image.publicURL}
-            alt={article.node.image.publicURL}
+          <Img
+            fluid={article.node.image.childImageSharp.fluid}
+            alt="picture"
             height="100"
           />
         </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
@@ -14,7 +15,11 @@ export const query = graphql`
       content
       published_at
       image {
-        publicURL
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   }
@@ -25,15 +30,15 @@ const Article = ({ data }) => {
   return (
     <Layout>
       <div>
-        <div
+        <Img
           id="banner"
           className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-          data-src={article.image.publicURL}
-          data-srcset={article.image.publicURL}
+          fluid={article.image.childImageSharp.fluid}
+          data-srcset={article.image.childImageSharp.fluid}
           data-uk-img
         >
           <h1>{article.title}</h1>
-        </div>
+        </Img>
 
         <div className="uk-section">
           <div className="uk-container uk-container-small">
