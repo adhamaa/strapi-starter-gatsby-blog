@@ -5,25 +5,26 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.21.28",
-    "gatsby-image": "^2.4.3",
-    "gatsby-plugin-manifest": "^2.4.3",
-    "gatsby-plugin-offline": "^3.2.2",
-    "gatsby-plugin-react-helmet": "^3.3.1",
-    "gatsby-plugin-sharp": "^2.6.3",
-    "gatsby-source-filesystem": "^2.3.3",
+    "gatsby": "^2.23.12",
+    "gatsby-image": "^2.4.9",
+    "gatsby-plugin-manifest": "^2.4.14",
+    "gatsby-plugin-offline": "^3.2.13",
+    "gatsby-plugin-react-helmet": "^3.3.6",
+    "gatsby-plugin-sharp": "^2.6.14",
+    "gatsby-source-filesystem": "^2.3.14",
     "gatsby-source-strapi": "^0.0.12",
-    "gatsby-transformer-sharp": "^2.5.2",
-    "moment": "^2.25.3",
+    "gatsby-transformer-sharp": "^2.5.7",
+    "moment": "^2.27.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
+    "react-helmet": "^6.1.0",
     "react-markdown": "^4.3.1",
     "react-moment": "^0.9.7",
-    "serialize-javascript": "^3.0.0"
+    "serialize-javascript": "^4.0.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "prettier": "^2.0.5"
   },
   "keywords": [
@@ -32,7 +33,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
